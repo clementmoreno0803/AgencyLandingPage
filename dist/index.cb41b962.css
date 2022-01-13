@@ -1,0 +1,374 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap";
+@font-face {
+    font-family: 'Mermaid';
+    src: url('Mermaid1001.58867714.ttf') format("ttf");
+}
+
+:root {
+    --primary: black;
+    --secondary: white;
+    --thirdly: rgb(136, 129, 129);
+    --footer: #aee5da;
+    --footer_svg: #337271;
+    --jaune: rgb(222, 240, 123);
+    --rouge: rgb(235, 133, 133);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+    color: var(--secondary);
+}
+
+h2 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Mermaid';
+    color: var(--primary);
+}
+
+h3 {
+    font-size: 1.225em;
+    font-family: 'Mermaid';
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0;
+    font-family: 'Mermaid';
+    color: var(--primary);
+}
+
+h5 {
+    font-size: 0.725em;
+    margin: 0;
+    opacity: 0.5;
+    color: var(--primary);
+}
+
+a {
+    font-size: 1.225em;
+    font-family: 'Mermaid';
+    color: var(--primary);
+    text-decoration: none;
+    z-index: 2;
+}
+
+p {
+    margin: 50px 0;
+    color: var(--primary);
+    opacity: 0.4;
+}
+
+/* ---HEADER--- */
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+.logo_header path {
+    fill: var(--secondary);
+}
+
+#hamburger {
+    display: none;
+}
+
+.header_img {
+    background-image: url('andrej-lisakov-fGZ2x8wFxC0-unsplash.2da98d29.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+}
+
+nav {
+    display: flex;
+    margin: 0 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    padding: 10px 20px;
+    list-style: none;
+    color: var(--secondary);
+    font-family: 'Roboto';
+    font-weight: 800;
+}
+
+li:nth-child(4) {
+    background: white;
+    border-radius: 25px;
+    color: var(--primary);
+}
+
+li:nth-child(4):active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--secondary);
+}
+
+.logo {
+    width: 150px;
+}
+
+.titre {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    flex-direction: column;
+}
+
+#arrow {
+    width: 3px;
+    background: var(--secondary);
+    height: 70px;
+    position: relative;
+    border-radius: 25px;
+}
+
+#arrow::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    bottom: 0px;
+    left: 6px;
+    background: var(--secondary);
+    width: 3px;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    transform-origin: left;
+}
+
+#arrow::after {
+    content: '';
+    position: absolute;
+    height: 15px;
+    bottom: 0px;
+    right: 3px;
+    background: var(--secondary);
+    width: 3px;
+    border-radius: 50px;
+    transform: rotate( 133deg);
+    transform-origin: left;
+}
+
+/* MAIN */
+
+.grid_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+}
+
+.grid {
+    width: 100%;
+    height: 90vh;
+}
+
+.grid_text_container {
+    height: 100%;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.underline {
+    z-index: 1;
+    width: 100px;
+    height: 9px;
+    position: relative;
+    bottom: 9px;
+    right: 2px;
+    border-radius: 25px;
+    opacity: 0.4;
+}
+
+.underline:active {
+    opacity: 1;
+}
+
+#jaune {
+    background: var(--jaune);
+}
+
+#rouge {
+    background: var(--rouge);
+}
+
+#fleur {
+    background-image: url(ronald-cuyan-AJgFLjnmSs4-unsplash.f007cbfc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#verre {
+    background-image: url(image-stand-out.e53c38a5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#ballon {
+    background-image: url(amy-shamblen-pJ_DCj9KswI-unsplash.5152de45.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#petales {
+    background-image: url(lucas-george-wendt-7JGJtzuqSEc-unsplash.368b0b14.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid_titre_container {
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+/* ---- CLIENT SECTION ---- */
+
+#testimonial {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.client_section {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.clients {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --GRID IMAGES--- */
+
+#images {
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+#images img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* --- FOOTER --- */
+
+footer {
+    height: 40%;
+    width: 100%;
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_logo,
+.socials path {
+    fill: var(--footer_svg);
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    color: var(--footer_svg);
+}
+
+.socials {
+    padding-top: 50px;
+}
+
+.socials svg {
+    padding: 0 10px;
+}
+
+/* ------ MEDIAS QUERIES ------ */
+
+@media screen and (max-width: 765px) {
+    header {
+        height: 60%;
+    }
+    nav ul {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    .titre {
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+        text-align: center;
+        flex-direction: column;
+    }
+    .grid {
+        height: 60vh;
+    }
+    .grid_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "fleur" "transform" "verre" "Stand";
+    }
+    #fleur {
+        grid-area: fleur;
+    }
+    .client_section {
+        flex-direction: column;
+    }
+    #petales,
+    #cerise {
+        background-position-y: center;
+    }
+}
+/*# sourceMappingURL=index.cb41b962.css.map */

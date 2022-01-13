@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'Mermaid';
+    src: url('/Assets/Mermaid1001.ttf') format("ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 :root {
     --primary: black;
     --secondary: white;
     --thirdly: rgb(136, 129, 129);
     --footer: #aee5da;
     --footer_svg: #337271;
+    --jaune: rgb(222, 240, 123);
+    --rouge: rgb(235, 133, 133);
 }
 
 body {
@@ -20,14 +28,26 @@ h1 {
     color: var(--secondary);
 }
 
+h2 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Mermaid';
+    color: var(--primary);
+}
+
 h3 {
+    font-size: 1.225em;
+    font-family: 'Mermaid';
     margin-bottom: 50px;
     text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1.5em;
     margin: 0;
+    font-family: 'Mermaid';
     color: var(--primary);
 }
 
@@ -38,9 +58,18 @@ h5 {
     color: var(--primary);
 }
 
+a {
+    font-size: 1.225em;
+    font-family: 'Mermaid';
+    color: var(--primary);
+    text-decoration: none;
+    z-index: 2;
+}
+
 p {
     margin: 50px 0;
     color: var(--primary);
+    opacity: 0.4;
 }
 
 
@@ -53,6 +82,10 @@ header {
 
 .logo_header path {
     fill: var(--secondary);
+}
+
+#hamburger {
+    display: none;
 }
 
 .header_img {
@@ -77,13 +110,20 @@ ul {
 li {
     padding: 10px 20px;
     list-style: none;
-    color: var(--secondary)
+    color: var(--secondary);
+    font-family: 'Roboto';
+    font-weight: 800;
 }
 
 li:nth-child(4) {
     background: white;
     border-radius: 25px;
     color: var(--primary);
+}
+
+li:nth-child(4):active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--secondary);
 }
 
 .logo {
@@ -134,10 +174,6 @@ li:nth-child(4) {
 
 /* MAIN */
 
-.grid_setup {
-    height: 250vh;
-}
-
 .grid_section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -147,7 +183,7 @@ li:nth-child(4) {
 
 .grid {
     width: 100%;
-    height: 100%;
+    height: 90vh;
 }
 
 .grid_text_container {
@@ -157,6 +193,29 @@ li:nth-child(4) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.underline {
+    z-index: 1;
+    width: 100px;
+    height: 9px;
+    position: relative;
+    bottom: 9px;
+    right: 2px;
+    border-radius: 25px;
+    opacity: 0.4;
+}
+
+.underline:active {
+    opacity: 1;
+}
+
+#jaune {
+    background: var(--jaune);
+}
+
+#rouge {
+    background: var(--rouge);
 }
 
 #fleur {
@@ -171,12 +230,10 @@ li:nth-child(4) {
     background-position: center;
 }
 
-#cerise {
-    background-image: url(/Assets/mae-mu-vbAEHCrvXZ0-unsplash.jpg);
+#ballon {
+    background-image: url(/Assets/amy-shamblen-pJ_DCj9KswI-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: center;
 }
 
 #petales {
@@ -200,7 +257,7 @@ li:nth-child(4) {
 /* ---- CLIENT SECTION ---- */
 
 #testimonial {
-    height: 600px;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -278,4 +335,45 @@ footer ul li {
 
 .socials svg {
     padding: 0 10px;
+}
+
+
+/* ------ MEDIAS QUERIES ------ */
+
+@media screen and (max-width: 765px) {
+    header {
+        height: 60%;
+    }
+    nav ul {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    .titre {
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+        text-align: center;
+        flex-direction: column;
+    }
+    .grid {
+        height: 60vh;
+    }
+    .grid_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "fleur" "transform" "verre" "Stand";
+    }
+    #fleur {
+        grid-area: fleur;
+    }
+    .client_section {
+        flex-direction: column;
+    }
+    #petales,
+    #cerise {
+        background-position-y: center;
+    }
 }
