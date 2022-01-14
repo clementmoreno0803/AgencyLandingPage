@@ -89,7 +89,7 @@ header {
 }
 
 .header_img {
-    background-image: url(../Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg);
+    background-image: url('../Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -219,25 +219,25 @@ li:nth-child(4):active {
 }
 
 #fleur {
-    background: url(../Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg);
+    background: url('../Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #verre {
-    background-image: url(../Assets/mobile/image-stand-out.jpg);
+    background-image: url('../Assets/mobile/image-stand-out.jpg');
     background-size: cover;
     background-position: center;
 }
 
 #ballon {
-    background-image: url(../Assets/amy-shamblen-pJ_DCj9KswI-unsplash.jpg);
+    background-image: url('../Assets/amy-shamblen-pJ_DCj9KswI-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #petales {
-    background-image: url(../Assets/lucas-george-wendt-7JGJtzuqSEc-unsplash.jpg);
+    background-image: url('../Assets/lucas-george-wendt-7JGJtzuqSEc-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
