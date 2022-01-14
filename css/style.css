@@ -344,6 +344,9 @@ footer ul li {
     header {
         height: 60%;
     }
+    nav {
+        padding-top: 25px;
+    }
     nav ul {
         display: none;
     }
