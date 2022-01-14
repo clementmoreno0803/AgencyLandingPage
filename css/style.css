@@ -89,7 +89,7 @@ header {
 }
 
 .header_img {
-    background-image: url('/Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg');
+    background-image: url(/Assets/desktop/andrej-lisakov-fGZ2x8wFxC0-unsplash.jpg);
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
