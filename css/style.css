@@ -83,6 +83,7 @@ header {
 
 .logo_header path {
     fill: var(--secondary);
+    margin-top: 50px;
 }
 
 #hamburger {
@@ -98,33 +99,8 @@ header {
 }
 
 nav {
-    display: flex;
     margin: 0 45px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#menuBurger {
-    display: flex;
-}
-
-li {
-    padding: 10px 20px;
-    list-style: none;
-    color: var(--secondary);
-    font-family: 'Roboto';
-    font-weight: 800;
-}
-
-li:nth-child(4) {
-    background: white;
-    border-radius: 25px;
-    color: var(--primary);
-}
-
-li:nth-child(4):active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--secondary);
+    padding-top: 30px;
 }
 
 .logo {
@@ -352,22 +328,6 @@ footer ul li:hover {
     }
     nav {
         padding-top: 25px;
-    }
-    nav #menuBurger {
-        background: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        position: absolute;
-        right: 50px;
-        top: 50px;
-        transition: all 0.4s cubic-bezier(0.57, 0, 0.39, 1.01);
-    }
-    nav #menuBurger li {
-        color: black;
-        text-align: center;
     }
     #arrow {
         height: 40px;
